@@ -18,7 +18,7 @@
 		F464BFA9292A48A400D98191 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F464BFA8292A48A400D98191 /* GoogleService-Info.plist */; };
 		F464BFAD292A512B00D98191 /* CalendarBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464BFAC292A512B00D98191 /* CalendarBodyLabel.swift */; };
 		F464BFB0292A529B00D98191 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464BFAF292A529B00D98191 /* LoginVC.swift */; };
-		F464BFB3292A5C4F00D98191 /* NCAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464BFB2292A5C4F00D98191 /* NCAlertVC.swift */; };
+		F464BFB3292A5C4F00D98191 /* CalendarAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464BFB2292A5C4F00D98191 /* CalendarAlertVC.swift */; };
 		F464BFB6292A624C00D98191 /* CalendarAlertContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464BFB5292A624C00D98191 /* CalendarAlertContainerView.swift */; };
 		F464BFB8292A631300D98191 /* CalendarTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464BFB7292A631300D98191 /* CalendarTitleLabel.swift */; };
 		F464BFBB292A63F500D98191 /* CalendarActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464BFBA292A63F500D98191 /* CalendarActionButton.swift */; };
@@ -35,6 +35,10 @@
 		F464BFDA292AD83A00D98191 /* CalendarAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464BFD9292AD83A00D98191 /* CalendarAPI.swift */; };
 		F464BFDC292AF2FA00D98191 /* CalendarModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464BFDB292AF2FA00D98191 /* CalendarModal.swift */; };
 		F464BFDE292BB41000D98191 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464BFDD292BB41000D98191 /* CalendarVC.swift */; };
+		F464BFE0292BFF1600D98191 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464BFDF292BFF1600D98191 /* CalendarManager.swift */; };
+		F464BFE2292C14F400D98191 /* StringEtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464BFE1292C14F400D98191 /* StringEtn.swift */; };
+		F464BFE4292C159600D98191 /* DateEtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464BFE3292C159600D98191 /* DateEtn.swift */; };
+		F464BFE6292C25D200D98191 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464BFE5292C25D200D98191 /* WebVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +77,7 @@
 		F464BFA8292A48A400D98191 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F464BFAC292A512B00D98191 /* CalendarBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarBodyLabel.swift; sourceTree = "<group>"; };
 		F464BFAF292A529B00D98191 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		F464BFB2292A5C4F00D98191 /* NCAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCAlertVC.swift; sourceTree = "<group>"; };
+		F464BFB2292A5C4F00D98191 /* CalendarAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAlertVC.swift; sourceTree = "<group>"; };
 		F464BFB5292A624C00D98191 /* CalendarAlertContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAlertContainerView.swift; sourceTree = "<group>"; };
 		F464BFB7292A631300D98191 /* CalendarTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTitleLabel.swift; sourceTree = "<group>"; };
 		F464BFBA292A63F500D98191 /* CalendarActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarActionButton.swift; sourceTree = "<group>"; };
@@ -90,6 +94,10 @@
 		F464BFD9292AD83A00D98191 /* CalendarAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAPI.swift; sourceTree = "<group>"; };
 		F464BFDB292AF2FA00D98191 /* CalendarModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModal.swift; sourceTree = "<group>"; };
 		F464BFDD292BB41000D98191 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		F464BFDF292BFF1600D98191 /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
+		F464BFE1292C14F400D98191 /* StringEtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEtn.swift; sourceTree = "<group>"; };
+		F464BFE3292C159600D98191 /* DateEtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEtn.swift; sourceTree = "<group>"; };
+		F464BFE5292C25D200D98191 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +236,7 @@
 				F464BFAF292A529B00D98191 /* LoginVC.swift */,
 				F464BFC4292A743100D98191 /* LauncherVC.swift */,
 				F464BFDD292BB41000D98191 /* CalendarVC.swift */,
+				F464BFE5292C25D200D98191 /* WebVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -235,7 +244,7 @@
 		F464BFB1292A5C3100D98191 /* UIViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F464BFB2292A5C4F00D98191 /* NCAlertVC.swift */,
+				F464BFB2292A5C4F00D98191 /* CalendarAlertVC.swift */,
 				F464BFC6292A754300D98191 /* CalendarLoadingVC.swift */,
 			);
 			path = UIViewControllers;
@@ -262,6 +271,8 @@
 			children = (
 				F464BFBE292A64E500D98191 /* UIViewControllerExt.swift */,
 				F464BFD1292ABBD900D98191 /* UIViewExt.swift */,
+				F464BFE1292C14F400D98191 /* StringEtn.swift */,
+				F464BFE3292C159600D98191 /* DateEtn.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -282,6 +293,7 @@
 				F464BFCB292A950A00D98191 /* UserManager.swift */,
 				F464BFCF292AABA800D98191 /* PersistentManager.swift */,
 				F464BFD3292AD4CF00D98191 /* NetworkManager.swift */,
+				F464BFDF292BFF1600D98191 /* CalendarManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -475,16 +487,20 @@
 				F464BFDE292BB41000D98191 /* CalendarVC.swift in Sources */,
 				F464BFD4292AD4CF00D98191 /* NetworkManager.swift in Sources */,
 				F464BFBF292A64E500D98191 /* UIViewControllerExt.swift in Sources */,
+				F464BFE0292BFF1600D98191 /* CalendarManager.swift in Sources */,
 				F464BFC3292A737900D98191 /* CalendarError.swift in Sources */,
-				F464BFB3292A5C4F00D98191 /* NCAlertVC.swift in Sources */,
+				F464BFE6292C25D200D98191 /* WebVC.swift in Sources */,
+				F464BFB3292A5C4F00D98191 /* CalendarAlertVC.swift in Sources */,
 				F464BFCC292A950A00D98191 /* UserManager.swift in Sources */,
 				F464BFCE292A958700D98191 /* ErrorConstants.swift in Sources */,
 				F464BFB6292A624C00D98191 /* CalendarAlertContainerView.swift in Sources */,
 				F456CD8C292A22FF0012555B /* AppDelegate.swift in Sources */,
 				F464BFC5292A743100D98191 /* LauncherVC.swift in Sources */,
+				F464BFE4292C159600D98191 /* DateEtn.swift in Sources */,
 				F464BFAD292A512B00D98191 /* CalendarBodyLabel.swift in Sources */,
 				F456CD8E292A22FF0012555B /* SceneDelegate.swift in Sources */,
 				F464BFD6292AD52200D98191 /* NetworkUtils.swift in Sources */,
+				F464BFE2292C14F400D98191 /* StringEtn.swift in Sources */,
 				F464BFBB292A63F500D98191 /* CalendarActionButton.swift in Sources */,
 				F464BFC7292A754300D98191 /* CalendarLoadingVC.swift in Sources */,
 				F464BFD2292ABBD900D98191 /* UIViewExt.swift in Sources */,

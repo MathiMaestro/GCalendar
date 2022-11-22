@@ -7,9 +7,15 @@
 
 import Foundation
 import FirebaseAuth
+import GoogleSignIn
 
 class UserManager {
-    static let shared = UserManager()
+    
+    static let shared       = UserManager()
+    var isFirstTime: Bool   = true
+    
+    var spotLightEventId : String?
+    
     var tokenDetail : TokenDetail? {
         get {
             return PersistenceManager.getToken()
@@ -38,6 +44,11 @@ class UserManager {
                 completed(.success(true))
             }
         }
+    }
+    
+    func signOut() {
+        GIDSignIn.sharedInstance.signOut()
+        tokenDetail = nil
     }
 }
 

@@ -12,14 +12,14 @@ struct Calendar : Decodable {
     let primary: Bool?
 }
 
-struct Event: Decodable {
+struct CalendarEvent: Decodable {
     let id: String
     let summary: String
-    let start: dateInfo
+    let start: EventDateInfo
     let htmlLink: String
 }
 
-struct dateInfo: Decodable {
+struct EventDateInfo: Decodable {
     let dateTime: String?
     let timeZone: String?
 }

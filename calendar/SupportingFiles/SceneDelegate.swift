@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreSpotlight
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -22,8 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
     }
     
-    private func getRootViewController() -> UINavigationController {
-        let vc = (UserManager.shared.tokenDetail == nil) ? LoginVC() : LauncherVC()
+    private func getRootViewController(with eventId: String? = nil) -> UINavigationController {
+        let vc = (UserManager.shared.tokenDetail == nil) ? LoginVC() : LauncherVC(eventId: eventId)
         return UINavigationController(rootViewController: vc)
     }
 
@@ -55,6 +56,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        if userActivity.activityType == CSSearchableItemActionType, let eventId = userActivity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
+            if UserManager.shared.isFirstTime {
+                UserManager.shared.spotLightEventId = eventId
+                UserManager.shared.isFirstTime = false
+            } else {
+                window?.rootViewController = getRootVC(for: userActivity, eventId: eventId)
+            }
+        }
+    }
+    
+    func getRootVC(for userActivity: NSUserActivity, eventId: String) -> UINavigationController? {
+            guard let navVC = window?.rootViewController as? UINavigationController, let calendarVC = navVC.viewControllers.first as? CalendarVC else {
+                return getRootViewController()
+              }
+            if let presentedControllers = calendarVC.presentedViewController as? UINavigationController {
+                presentedControllers.viewControllers.last?.presentedViewController?.dismiss(animated: false)
+                presentedControllers.popToRootViewController(animated: false)
+            }
+            return UINavigationController(rootViewController: CalendarVC(eventId: eventId))
+    }
 
 }
 

@@ -76,19 +76,18 @@ extension LoginVC {
         
         GIDSignIn.sharedInstance.signIn(with: config, presenting: self, hint: nil, additionalScopes: ["https://www.googleapis.com/auth/calendar.readonly","https://www.googleapis.com/auth/calendar"]) { [unowned self] user, error in
             guard error == nil, let authentication = user?.authentication, let idToken = authentication.idToken else {
-                print(error)
                 presentCalendarAlertViewInMainThread(title: ErrorTitles.loginErrorTitle, message: ErrorDescriptions.loginErrorMessage, buttonTitle: ErrorButtonTitles.OkButtonTitle)
                 return
             }
             UserManager.shared.tokenDetail = TokenDetail(idToken: idToken, accessToken: authentication.accessToken)
-            self.showHomeView()
+            self.showLauncherView()
         }
     }
     
-    private func showHomeView() {
+    private func showLauncherView() {
         DispatchQueue.main.async {
             guard let window = UIApplication.shared.currentUIWindow() else { return }
-            window.rootViewController = UINavigationController(rootViewController: CalendarVC())
+            window.rootViewController = UINavigationController(rootViewController: LauncherVC())
         }
     }
 }

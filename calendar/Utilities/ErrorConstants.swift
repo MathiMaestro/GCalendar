@@ -11,6 +11,7 @@ enum ErrorDescriptions {
     static let loginErrorMessage    = "Sorry, Unable to login.\n Please try again."
     static let sessionExpireMessage = "Your session has expired. Kindly login again!"
     static let tokenMessage         = "Session expired. Logging out"
+    static let calendarFetchMessage = "Sorry, Unable to fetch data from your Google calendar"
 }
 
 enum ErrorTitles {

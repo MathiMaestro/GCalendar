@@ -33,7 +33,18 @@ class LauncherVC: CalendarLoadingVC {
     
     let initializingLabel   = CalendarBodyLabel(textColor: .secondaryLabel, textAlignment: .center, title: "Intializing . . .")
     let launcherMessage     = CalendarBodyLabel(textColor: .secondaryLabel, textAlignment: .center, title: "Hang on a sec. We're making everything ready for you")
+    
+    var spotLightEventId: String?
 
+    init(eventId: String? = nil) {
+        self.spotLightEventId = eventId
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -100,17 +111,24 @@ class LauncherVC: CalendarLoadingVC {
         UserManager.shared.checIsSessionValid { [unowned self] result in
             switch result {
             case .success(_):
-                self.showHomeView()
+                CalendarManager.shared.getCalendarList { [unowned self] result in
+                    switch result {
+                    case .success(_):
+                        self.showHomeView()
+                    case .failure(let error):
+                        self.showHomeView(error: error)
+                    }
+                }
             case .failure(_):
                 self.goToLoginPage()
             }
         }
     }
     
-    private func showHomeView() {
+    private func showHomeView(error: CalendarError? = nil) {
         DispatchQueue.main.async {
             guard let window = UIApplication.shared.currentUIWindow() else { return }
-            window.rootViewController = CalendarVC()
+            window.rootViewController = UINavigationController(rootViewController: CalendarVC(error: error, eventId: self.spotLightEventId))
         }
     }
     
